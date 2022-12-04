@@ -1,0 +1,32 @@
+steps:
+  - label: "Step 1: Build in docker container"
+    command: 
+     - go build -o hello .
+     - buildkite-agent artifact upload hello
+    artifact_paths: "./bulids/*"
+    plugins:
+      - docker-compose#v3.0.3:
+          image: "golang:1.18.0"
+          run: app
+  # just in case the build is kinda big. lol
+  - wait
+  # block for the name
+  - label: "Step 2: Block for the name"
+    block: "Name"
+    prompt: "Enter your name please."
+    fields:
+      - text: "Developer's name"
+        key: "dev-name"
+        required: true
+        default: "John Doe"
+  # download artifact into the tmp dir
+  - label: "Step 3: Download artifact and run"
+    command:
+      - buildkite-agent artifact search hello
+      - mkdir builds
+      - buildkite-agent artifact download hello ./builds --debug
+      - ls 
+      - chmod +x ./builds/hello
+      - ./builds/hello $(buildkite-agent meta-data get dev-name)
+
+
