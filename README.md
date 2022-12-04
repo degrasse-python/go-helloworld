@@ -11,7 +11,7 @@ This repository is a fork of the basic Golang example repo, trimmed down to cont
 3. ssh to the VM and run the commands below to prep the VM to be able to run docker.
 
 
-notes: Make sure you don't start the agent until you have added the agent to the docker group. If your agent isn't able to run docker commands check to make sure the buildkite-agent is in the docker group on the VM -> restart both services and try again.
+#### notes: Make sure you don't start the agent until you have added the agent to the docker group. If your agent isn't able to run docker commands check to make sure the buildkite-agent is in the docker group on the VM -> restart both services and try again.
 
 ```
 curl -L https://raw.githubusercontent.com/degrasse-python/go-helloworld/main/setup-docker-ec2.sh > setup-docker.sh
