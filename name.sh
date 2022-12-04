@@ -1,0 +1,1 @@
+RELEASE_NAME=$(buildkite-agent meta-data get dev-name)
