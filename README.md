@@ -18,11 +18,11 @@ curl -L https://raw.githubusercontent.com/degrasse-python/go-helloworld/main/set
 ./setup-docker.sh
 ```
 
-## Buildkite pipeline
+#### Buildkite pipeline
 
 The pipeline in the .buildkite dir has all of the instructions to build the project and run it on the EC2 instance in a docker container. The artifact from the go build is uploaded to an S3 bucket for use at a later stage. Configure a webbhook to wait for a push to the scm to generate a build using the EC2 agent. If you have made is this far everything should be working properly.
 
-## To build the project locally:
+#### To build the project locally:
 
 ```
 $ cd hello
