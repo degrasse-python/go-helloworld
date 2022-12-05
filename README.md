@@ -1,7 +1,7 @@
 # Go Hello World docker example using Buildkite for CI
 
 [![Go Reference](https://pkg.go.dev/badge/golang.org/x/example.svg)](https://pkg.go.dev/golang.org/x/example)
-[![Build status](https://badge.buildkite.com/1d8acef418e9c966868f30d4459c3015498900d300fab9d8ad.svg)](https://buildkite.com/self-50/hello-world)
+[![Build status](https://badge.buildkite.com/1d8acef418e9c966868f30d4459c3015498900d300fab9d8ad.svg)](https://buildkite.com/deon-510/hello-world)
 
 This repository is a fork of the basic Golang example repo, trimmed down to contain a single example. The project is built using a buildkite agent on an EC2 instance on AWS using the Amazon Linux 2 image. You will need to:
 
