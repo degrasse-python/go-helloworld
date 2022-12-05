@@ -5,6 +5,7 @@
 
 This repository is a fork of the basic Golang example repo, trimmed down to contain a single example. The project is built using a buildkite agent on an EC2 instance on AWS using the Amazon Linux 2 image. 
 
+
 ## Setup EC2 agent
 1. To setup the EC2 agent login to AWS and chose the free tier of EC2 with the Amazon Linux 2 image. Make sure you can ssh to the EC2 VM from your local before continuing.
 2. Follow the instructions from buildkite to install a buildkite-agent on Redhat / CentOS / Amazon Linux image.
