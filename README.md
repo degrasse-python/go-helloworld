@@ -19,7 +19,7 @@ To setup the EC2, agent login to AWS and chose the free tier of EC2 with the Ama
 
 Follow the instructions from buildkite to install a buildkite-agent on Redhat / CentOS / Amazon Linux image.
 
-notes: Make sure you don't start the agent until you have added the agent to the docker group. If your agent isn't able to run docker commands check to make sure the buildkite-agent is in the docker group on the VM -> restart both services and try again.
+notes: Make sure you don't start the docker service until you have added the agent to the docker group. If your agent isn't able to run docker commands check to make sure the buildkite-agent is in the docker group on the VM -> restart both services and try again.
 
 
 ### Install Docker
